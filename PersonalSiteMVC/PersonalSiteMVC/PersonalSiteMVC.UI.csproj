@@ -163,10 +163,27 @@
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="_Archive\Scripts\bootstrap.js" />
+    <Content Include="_Archive\Scripts\bootstrap.min.js" />
+    <None Include="_Archive\Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.min.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="_Archive\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.min.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="_Archive\Scripts\modernizr-2.8.3.js" />
     <Content Include="_Archive\_OriginalLayout.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.min.map" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="configs\" />
     <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
