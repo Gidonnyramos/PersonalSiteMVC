@@ -120,11 +120,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Content\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StronglyTypedDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +145,8 @@
     <Content Include="Content\images\contact-header.jpg" />
     <Content Include="Content\images\home-bg.jpg" />
     <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\MichaelTullis.jpg" />
+    <Content Include="Content\images\MIndiFord.jpg" />
     <Content Include="Content\images\portfolio-header.jpg" />
     <Content Include="Content\images\portfolio-img1.jpg" />
     <Content Include="Content\images\portfolio-img10.jpg" />
@@ -158,11 +161,21 @@
     <Content Include="Content\images\team1.jpg" />
     <Content Include="Content\images\team2.jpg" />
     <Content Include="Content\images\team3.jpg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\nivo-lightbox.min.js" />
+    <Content Include="Content\js\~BROMIUM\bootstrap.min.js" />
+    <Content Include="Content\js\~BROMIUM\custom.js" />
+    <Content Include="Content\js\~BROMIUM\jquery.js" />
+    <Content Include="Content\js\~BROMIUM\nivo-lightbox.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="_Archive\contact.html" />
+    <Content Include="_Archive\credits.txt" />
     <Content Include="_Archive\css\bootstrap-darkly-theme.css" />
     <Content Include="_Archive\css\bootstrap-flatly-theme.css" />
     <Content Include="_Archive\css\bootstrap-flatly-theme.min.css" />
@@ -197,6 +210,33 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_Archive\index.html" />
+    <Content Include="_Archive\js\bootstrap.min.js" />
+    <Content Include="_Archive\js\custom.js" />
+    <Content Include="_Archive\js\jquery.js" />
+    <Content Include="_Archive\js\nivo-lightbox.min.js" />
+    <Content Include="_Archive\js\~BROMIUM\bootstrap.min.js" />
+    <Content Include="_Archive\js\~BROMIUM\custom.js" />
+    <Content Include="_Archive\js\~BROMIUM\jquery.js" />
+    <Content Include="_Archive\js\~BROMIUM\nivo-lightbox.min.js" />
+    <Content Include="_Archive\Links.html" />
+    <Content Include="_Archive\Projects.html" />
+    <Content Include="_Archive\Resume.html" />
+    <Content Include="_Archive\Scripts\bootstrap.js" />
+    <Content Include="_Archive\Scripts\bootstrap.min.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.min.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.min.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="_Archive\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="_Archive\Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\Portfolio.cshtml" />
+    <Content Include="configs\AppSecretKeys.config" />
+    <None Include="_Archive\Scripts\jquery.validate-vsdoc.js" />
+    <None Include="_Archive\Scripts\jquery-3.3.1.intellisense.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -218,22 +258,23 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_OriginalLayout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
-    <Content Include="Views\Home\_OriginalLayout.cshtml" />
-    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\OriginalLayout.cshtml" />
+    <Content Include="Views\Home\Links.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.min.map" />
+    <Content Include="_Archive\Scripts\jquery-3.3.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="configs\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\StronglyTypedData\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -8,31 +8,22 @@ namespace PersonalSiteMVC.Controllers
 {
     public class HomeController : Controller
     {
-
-        ////http://domain/Controller/Action/optionalParams
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Resume()
+        public ActionResult About()
         {
-            return View();
-        }
+            ViewBag.Message = "Your application description page.";
 
-        public ActionResult Links()
-        {
-            return View();
-        }
-
-        public ActionResult Portfolio()
-        {
             return View();
         }
 
         public ActionResult Contact()
         {
-         
+            ViewBag.Message = "Your contact page.";
+
             return View();
         }
     }

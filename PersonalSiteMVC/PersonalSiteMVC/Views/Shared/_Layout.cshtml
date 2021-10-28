@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Site</title>
+    <meta name="keywords" content="Gidonny Ramos">
+    <meta name="keywords" content="Personal Site, Portfolio, Full Stack Developer">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="~/Content/css/nivo_themes/default/default.css">
+    <link rel="stylesheet" href="~/Content/css/templatemo-style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+   
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="@Url.Action("Index", "Home")">HOME</a></li>
+                    <li class="active"><a href="@Url.Action("Resume", "Home")">RESUME</a></li>
+                    <li class="active"><a href="@Url.Action("Links", "Home")">LINKS</a></li>
+                    <li class="active"><a href="@Url.Action("Portfolio", "Home")">PORTFOLIO</a></li>
+                    <li class="active"><a href="@Url.Action("Contact", "Home")">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12"></div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderBody()
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3 col-sm-4">
+                    <h3>Useful Links</h3>
+                    <p><a href="@Url.Action("Index", "Home")">HOME</a></p>
+                    <p><a href="@Url.Action("Resume", "Home")">RESUME</a></p>
+                    <p><a href="@Url.Action("Links", "Home")">LINKS</a></p>
+                    <p><a href="@Url.Action("Portfolio", "Home")">PORTFOLIO</a></p>
+                    <p><a href="@Url.Action("Contact", "Home")">CONTACT</a></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <p>Copyright © 2021 Gidonny Ramos</p>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="social-icons">
+                        <li><a href="https://facebook.com/gidonnyramos" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline item"><a class="text-white" href="https://twitter.com/gidonnyramos" target="_blank"> <i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline item"><a class="text-white" href="https://linkedin.com/in/gidonny-ramos-lmsw-mba-mpa-ms-620a3217a" target="_blank"> <i class="fa fa-envelope-o"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Content/js/jquery.js"></script>
+
+
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/nivo-lightbox.min.js"></script>
+    <script src="~/Content/js/custom.js"></script>
+
+    <script>
+        $("#ContactCreateForm").submit(function (e) {
+            var forData = $(this).serialArray();
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("ContactAjax", "Home")',
+                type: 'POST',
+                data: formData,
+                datatype: 'json',
+                success: function (data) {
+                    $("#contactForm").hide();
+                    $("#contactConfirm").show();
+                }
+            });
+        )};
+    </script>
+
+
+</body>
+</html>
