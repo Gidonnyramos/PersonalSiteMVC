@@ -1,0 +1,22 @@
+﻿header
+{
+    background-color: lightgray;
+}
+
+.menu li a
+{
+    font-size: .8em;
+    color: black;
+}
+
+    .menu li a:hover, #logo h1 a:hover, .menu li.active a
+    {
+        background: white;
+        color: blue;
+    }
+
+footer, .copy-right
+{
+    background: #161616;
+    width: 100%;
+}

@@ -1,4 +1,3 @@
-
 // GOOGLE MAP
 var map = '';
 var center;

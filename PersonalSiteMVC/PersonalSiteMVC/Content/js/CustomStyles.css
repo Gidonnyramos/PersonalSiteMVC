@@ -1,0 +1,22 @@
+﻿header
+{
+    background-color: #161616;
+}
+
+.menu li a
+{
+    font-size: .8em;
+    color: white !important;
+}
+
+    .menu li a:hover, #logo h1 a:hover, .menu li.active a
+    {
+        border-bottom: 2px solid white;
+        color: blue;
+    }
+
+footer, .copy-right
+{
+    background: #161616;
+    width: 100%;
+}

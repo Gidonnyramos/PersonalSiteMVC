@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StronglyTypedDataController.cs" />
+    <Compile Include="Controllers\ViewBagDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,25 +134,37 @@
     <Content Include="Content\css\bootstrap-flatly-theme.css" />
     <Content Include="Content\css\bootstrap-flatly-theme.min.css" />
     <Content Include="Content\css\bootstrap-superhero-theme.css" />
+    <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\css_slider.css" />
     <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\CustomStyles.css" />
     <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\import.css" />
     <Content Include="Content\css\nivo-lightbox.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\css\templatemo-style.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\about-header.jpg" />
     <Content Include="Content\images\about-img.jpg" />
     <Content Include="Content\images\ben-krygsman-745458-unsplash.jpg" />
+    <Content Include="Content\images\Benjami_Adler %281%29 %281%29.jpg" />
+    <Content Include="Content\images\Benjami_Adler %282%29.jpg" />
+    <Content Include="Content\images\Benjami_Adler.jpg" />
     <Content Include="Content\images\contact-header.jpg" />
     <Content Include="Content\images\home-bg.jpg" />
+    <Content Include="Content\images\JustinVignone %281%29.jpg" />
     <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\MichaelTullis.jpg" />
-    <Content Include="Content\images\MIndiFord.jpg" />
+    <Content Include="Content\images\MichaelTullis %284%29.jpg" />
+    <Content Include="Content\images\MindiFord %288%29.jpg" />
+    <Content Include="Content\images\MIndiFord %289%29.jpg" />
     <Content Include="Content\images\portfolio-header.jpg" />
     <Content Include="Content\images\portfolio-img1.jpg" />
     <Content Include="Content\images\portfolio-img10.jpg" />
     <Content Include="Content\images\portfolio-img2.jpg" />
     <Content Include="Content\images\portfolio-img3.jpg" />
+    <Content Include="Content\images\portfolio-img4 %281%29.jpg" />
     <Content Include="Content\images\portfolio-img4.jpg" />
     <Content Include="Content\images\portfolio-img5.jpg" />
     <Content Include="Content\images\portfolio-img6.jpg" />
@@ -163,6 +176,7 @@
     <Content Include="Content\images\team3.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\custom.js" />
+    <Content Include="Content\js\CustomStyles.css" />
     <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\nivo-lightbox.min.js" />
     <Content Include="Content\js\~BROMIUM\bootstrap.min.js" />
@@ -170,10 +184,10 @@
     <Content Include="Content\js\~BROMIUM\jquery.js" />
     <Content Include="Content\js\~BROMIUM\nivo-lightbox.min.js" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="_Archive\contact.html" />
     <Content Include="_Archive\credits.txt" />
     <Content Include="_Archive\css\bootstrap-darkly-theme.css" />
@@ -182,7 +196,6 @@
     <Content Include="_Archive\css\bootstrap-superhero-theme.css" />
     <Content Include="_Archive\css\bootstrap.min.css" />
     <Content Include="_Archive\css\custom.css" />
-    <Content Include="_Archive\css\font-awesome.min.css" />
     <Content Include="_Archive\css\nivo-lightbox.css" />
     <Content Include="_Archive\css\templatemo-style.css" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.svg" />
@@ -234,6 +247,19 @@
     <Content Include="_Archive\Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="_Archive\Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Home\Portfolio.cshtml" />
+    <Content Include="Content\images\Ramos_Resume.pdf" />
+    <Content Include="Content\images\GRamos_ResumeIT.pdf" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Views\StronglyTypedData\Contact.cshtml" />
+    <Content Include="Views\ViewBagData\Contact.cshtml" />
+    <Content Include="Views\StronglyTypedData\Index.cshtml" />
+    <Content Include="Views\ViewBagData\Index.cshtml" />
+    <Content Include="Views\StronglyTypedData\EmailConfirmation.cshtml" />
+    <Content Include="configs\connections.config" />
     <Content Include="configs\AppSecretKeys.config" />
     <None Include="_Archive\Scripts\jquery.validate-vsdoc.js" />
     <None Include="_Archive\Scripts\jquery-3.3.1.intellisense.js" />
@@ -248,7 +274,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -268,19 +296,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\OriginalLayout.cshtml" />
     <Content Include="Views\Home\Links.cshtml" />
-    <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="_Archive\Scripts\jquery-3.3.1.min.map" />
     <Content Include="_Archive\Scripts\jquery-3.3.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\StronglyTypedData\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
