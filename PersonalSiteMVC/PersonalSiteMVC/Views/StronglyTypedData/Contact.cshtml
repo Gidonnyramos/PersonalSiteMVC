@@ -1,4 +1,4 @@
-﻿@model PersonalSiteMVC.Models.ContactViewModel
+﻿@model PersonalSiteMVC.UI.Models.ContactViewModel
 
 @{
     ViewBag.Title = "Contact";
@@ -6,13 +6,14 @@
 
 <h2>@ViewBag.Title</h2>
 
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        @*<h4>ContactViewModel</h4>
-            <hr />*@
+        <h4>ContactViewModel</h4>
+            <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })

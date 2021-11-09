@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;//Add for server-side validation
 
-namespace PersonalSiteMVC.Models
+namespace PersonalSiteMVC.UI.MVC.Models
 {
     public class ContactViewModel
     {
@@ -13,7 +13,7 @@ namespace PersonalSiteMVC.Models
 
         [Required(ErrorMessage = "*Email is required")]
         [DataType(DataType.EmailAddress)] //[DataType(DataType.EmailAddress)] pattern matches the input to ensure it is a valid email
-        //[RegularExpression()] is similar and allows the use of RegEx patter matching
+        //[RegularExpression()] is similar and allows the use of RegEx pattern matching
         public string Email { get; set; }
 
         //Optional if you would like to require subject

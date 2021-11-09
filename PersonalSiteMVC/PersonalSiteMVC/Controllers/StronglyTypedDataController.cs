@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
-
+//All of the using statement below will need to be added for the contact form functionality
+using PersonalSiteMVC.UI.Models;//added for access to the FamilyMemberViewModel and ContactViewModel
 using System.Configuration; //This gives me access to objects in the web.config and AppSecretKeys.config
 using System.Net;//This allows us to access/use the NetworkCredential object
 using System.Net.Mail;//This allows us to use the SMTPClient object to send our message
@@ -18,17 +21,17 @@ namespace PersonalSiteMVC.Controllers
             return View();
         }
 
-
-        //Get action - Contact - This is what renders the form to the UI
+       
         public ActionResult Contact()
         {
             return View();
         }
 
+ 
         //Post action - Contact - This is what submits the information for the contact form. In the post action will be our functionality to send a message via an SMTP Client.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Contact(ContactViewModel cvm)
+        public ActionResult Contact(UI.Models.ContactViewModel cvm)
         {
             //When a class has validation attributes, that validation should be checked BEFORE attempting to process any data.
             if (!ModelState.IsValid)
@@ -66,12 +69,10 @@ namespace PersonalSiteMVC.Controllers
             mm.ReplyToList.Add(cvm.Email);
 
             //SMTP Client object - this is what actually allows us to send the message
-            SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["EmailClient"].ToString())
-            {
+            SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["EmailClient"].ToString());
 
-                //Add in client credentials (username and password from smarterasp.net)
-                Credentials = new NetworkCredential(ConfigurationManager.AppSettings["EmailUser"].ToString(), ConfigurationManager.AppSettings["EmailPass"].ToString())
-            };
+            //Add in client credentials (username and password from smarterasp.net)
+            client.Credentials = new NetworkCredential(ConfigurationManager.AppSettings["EmailUser"].ToString(), ConfigurationManager.AppSettings["EmailPass"].ToString());
 
             //Use a try/catch to send the object
             //It is possible that the mail server is down or we may have configuration issues, so we to encapsulate our code to send this message in a try/catch.

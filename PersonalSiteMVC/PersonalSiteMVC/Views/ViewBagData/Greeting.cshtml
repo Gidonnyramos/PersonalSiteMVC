@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Greeting";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="get">
+    @* get above is getting the Action called Greeting from the ViewBag controller, but passing the information from the inputs as well. So the inputs below will be used as parameters in the Action in the controller to customize the User Experience. *@
+    <div class="row">
+        <div class="col-md-4">
+            <input type="text" name="FirstName" placeholder="First Name" class="form-control" />
+            @* The name attribute's value needs to match the parameter passed through in the action in the controller (ViewBagData/Greeting). See the ViewBagData controller and the params being passed in the Greeting Action. *@
+        </div>
+        <div class="col-md-4">
+            <input type="text" name="LastName" placeholder="Last Name" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <input type="submit" value="Click for Greeting" class="btn btn-success" />
+            <a class="btn btn-outline-danger" href="@Url.Action("Greeting", "ViewBagData")">Reset</a>
+        </div>
+    </div>
+</form>
+
+@if (ViewBag.Greeting != null)
+{
+    <hr />
+    <h2>@ViewBag.Greeting</h2>
+}
+
+

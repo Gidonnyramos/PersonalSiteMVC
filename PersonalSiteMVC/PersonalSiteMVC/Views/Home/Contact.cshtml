@@ -1,130 +1,75 @@
-﻿@{
+﻿@model PersonalSiteMVC.UI.Models.ContactViewModel
+
+
+@{
     ViewBag.Title = "Contact";
 }
 
 <h2>@ViewBag.Title</h2>
 
-<h3>@ViewBag.Message</h3>
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-
-author: templatemo
-author URL: https://templatemo.com/
-License: Creative Commons Attribution
-License URL: https://templatemo.com/
-
--->
-
-    <!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Demand Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-
-   
-   
-    <section class="container mt-4 mb-4 mainContent">
+<section class="contact-form">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
 
 
-                <h2>Contact</h2>
-                <br/>
+                @* The @using (Html.BeginForm()) will autoamtically create a <form> element for us in the view. *@
 
-                <form action="/StronglyTypedData/Contact" method="post">
-                    <input name="__RequestVerificationToken" type="hidden" value="6kVhSo--ODEODUnkhM10_6HgQ-7D1DVqFuOx34AvlwCQ2gpGOm-1tKxvq09KsvfhkDbKobSC5zeNW73IfY77fsHQNePMOFLonHAL9u01q4Q1" />    <div class="form-horizontal">
+                @using (Html.BeginForm())
+                {
 
+                    @* @Html.AntiForgeryToken is created only when the user submits/uses this form.
+            This is directly tied to the [ValidateAntiForgeryToken] annotation in the Controller. *@
 
-                        <div class="form-group">
-                            <label class="control-label col-md-2" for="Name">Name</label>
-                            <div class="col-md-10">
-                                <input class="form-control text-box single-line" data-val="true" data-val-required="** Name is required" id="Name" name="Name" type="text" value="" />
-                                <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
+                    @Html.AntiForgeryToken()
 
-                        <div class="form-group">
-                            <label class="control-label col-md-2" for="Subject">Subject</label>
-                            <div class="col-md-10">
-                                <input class="form-control text-box single-line" id="Subject" name="Subject" type="text" value="" />
-                                <span class="field-validation-valid text-danger" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-2" for="Email">Email</label>
-                            <div class="col-md-10">
-                                <input class="form-control text-box single-line" data-val="true" data-val-required="** Email is required" id="Email" name="Email" type="email" value="" />
-                                <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-2" for="Message">Message</label>
-                            <div class="col-md-10">
-                                <textarea class="form-control text-box multi-line" data-val="true" data-val-required="** Message is required" id="Message" name="Message">
-</textarea>
-                                <span class="field-validation-valid text-danger" data-valmsg-for="Message" data-valmsg-replace="true"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Send Message" class="btn btn-primary" />
-                            </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                </form>
 
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                }
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Send" class="btn btn-default" />
+                    </div>
+                </div>
 
             </div>
 
-        </div>
-    </section>
-    
-    <!-- //copyright -->
-    <!-- move top -->
-    <div class="move-top text-right">
-        <a href="#home" class="move-top">
-            <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
-        </a>
-    </div>
-    <!-- move top -->
-    <script src="Scripts/jquery-3.3.1.js"></script>
+</div>
 
-    <script src="Scripts/bootstrap.js"></script>
+</div>        
+</section>
 
-
-    <script src="Scripts/jquery.validate.js"></script>
-    <script src="Scripts/jquery.validate.unobtrusive.js"></script>
-
-
-
-    <script>
-       
-        $('.menu li').each(function () {
-           
-            if ($(this).find('a').attr('href') == window.location.pathname) {
-                
-                $(this).addClass('active');
-            }
-        });
-    </script>
-
-    <!-- Visual Studio Browser Link -->
-    <script type="text/javascript" src="http://localhost:65531/445fc69652c54ccb8439b483e0254c09/browserLink" async="async" id="__browserLink_initializationData" data-requestId="43f8dec4be29438f860ebfbe4cff4e06" data-appName="Chrome"></script>
-    <!-- End Browser Link -->
-
+    @*<div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>*@

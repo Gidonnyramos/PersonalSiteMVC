@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using PersonalSiteMVC.UI.Models;//Gives us access to the ViewModels in our application.
 
 
 namespace PersonalSiteMVC.Controllers
@@ -13,7 +13,7 @@ namespace PersonalSiteMVC.Controllers
         // GET: ViewBagData
         public ActionResult Index()
         {
-            ViewBag.Action = "Hello!";
+            //ViewBag.Action = "Hello!";
 
             return View();
         }
