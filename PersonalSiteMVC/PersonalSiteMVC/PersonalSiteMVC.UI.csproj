@@ -155,7 +155,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_OriginalLayout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Portfolio.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.eot" />
@@ -164,6 +164,10 @@
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout - Copy.cshtml" />
     <Content Include="_Archive\_OriginalLayout.cshtml" />
+    <Content Include="Views\Home\Links.cshtml" />
+    <Content Include="Views\Home\OriginalContact.cshtml" />
+    <Content Include="Views\Home\Projects.cshtml" />
+    <Content Include="Views\Home\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

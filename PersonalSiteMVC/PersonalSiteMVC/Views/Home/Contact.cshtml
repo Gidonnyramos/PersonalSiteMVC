@@ -1,17 +1,110 @@
-﻿@{
+﻿
+@model PersonalSiteMVC.Models.ContactViewModel
+
+
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+
+<link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="~/Content/css/nivo-lightbox.css">
+
+<link rel="stylesheet" href="~/Content/css/templatemo-style.css">
+
+
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+<link href="~/Content/css/CustomStyles.css" rel="stylesheet" />
+
+
+<section class="container mt-4 mb-4 mainContent">
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <h2>Contact</h2>
+            <br />
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Name">Name</label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="** Name is required" id="Name" name="Name" type="text" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Subject">Subject</label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" id="Subject" name="Subject" type="text" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Email">Email</label>
+                <div class="col-md-10">
+                    <input class="form-control text-box single-line" data-val="true" data-val-required="** Email is required" id="Email" name="Email" type="email" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2" for="Message">Message</label>
+                <div class="col-md-10">
+                    <textarea class="form-control text-box multi-line" data-val="true" data-val-required="** Message is required" id="Message" name="Message">
+</textarea>
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Send Message" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+</section>
+<!-- copyright -->
+<!-- //copyright -->
+<!-- move top -->
+<div class="move-top text-right">
+    <a href="#home" class="move-top">
+        <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+    </a>
+</div>
+<!-- move top -->
+<script src="/Scripts/jquery-3.3.1.js"></script>
+
+<script src="/Scripts/bootstrap.js"></script>
+
+
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+<script>
+    //Dealing with Highlighted navigation from a template, you need to figure out what class they are using to change the styling of the highlighted navigation and where that class is used in the HTML (is the class on the li or the a tag?).
+    $('.menu li').each(function () {
+        //In this example the class of active is attached to the li, so you must go one element further in the structure to check the href value of the anchor tag and ensure it matches the browser's URL
+        if ($(this).find('a').attr('href') == window.location.pathname) {
+            //if they match add the class name active. $(this) refers to each li in the menu
+            $(this).addClass('active');
+        }
+    });
+</script>
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="http://localhost:61162/e48392f8c9404cd6b5ef0ce794e26999/browserLink" async="async" id="__browserLink_initializationData" data-requestId="5c6cf1c7388c4fa48525e342992279d7" data-appName="Chrome"></script>
+<!-- End Browser Link -->
