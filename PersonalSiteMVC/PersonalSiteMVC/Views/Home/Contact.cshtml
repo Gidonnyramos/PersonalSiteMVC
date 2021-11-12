@@ -1,9 +1,9 @@
-﻿@model PersonalSiteMVC.Models.ContactViewModel
-
+﻿
 @{
     ViewBag.Title = "Contact";
 }
 
+<h2>@ViewBag.Title</h2>
 
 
 <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
@@ -75,9 +75,9 @@
 </section>
 
 <div class="move-top text-right">
-    @*<a href="#home" class="move-top">*@
+    <a href="#home" class="move-top">
         <span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
-   
+   </a>
 </div>
 <!-- move top -->
 <script src="/Scripts/jquery-3.3.1.js"></script>
@@ -91,11 +91,11 @@
 
 
 <script>
-    //Dealing with Highlighted navigation from a template, you need to figure out what class they are using to change the styling of the highlighted navigation and where that class is used in the HTML (is the class on the li or the a tag?).
+    
     $('.menu li').each(function () {
-        //In this example the class of active is attached to the li, so you must go one element further in the structure to check the href value of the anchor tag and ensure it matches the browser's URL
+        
         if ($(this).find('a').attr('href') == window.location.pathname) {
-            //if they match add the class name active. $(this) refers to each li in the menu
+            
             $(this).addClass('active');
         }
     });

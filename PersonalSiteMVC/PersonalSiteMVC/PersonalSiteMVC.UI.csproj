@@ -120,15 +120,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Content\AssemblyInfo.cs" />
     <Compile Include="Content\images\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactViewModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Archive\images\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\bootstrap-darkly-theme.css" />
@@ -144,7 +142,6 @@
     <Content Include="Content\css\nivo-lightbox.css" />
     <Content Include="Content\css\Site.css" />
     <Content Include="Content\css\style.css" />
-    <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\templatemo-style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\about-header.jpg" />
@@ -194,6 +191,20 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="_Archive\css\bootstrap-darkly-theme.css" />
+    <Content Include="_Archive\css\bootstrap-flatly-theme.css" />
+    <Content Include="_Archive\css\bootstrap-flatly-theme.min.css" />
+    <Content Include="_Archive\css\bootstrap-superhero-theme.css" />
+    <Content Include="_Archive\css\bootstrap.css" />
+    <Content Include="_Archive\css\bootstrap.min.css" />
+    <Content Include="_Archive\css\css_slider.css" />
+    <Content Include="_Archive\css\custom.css" />
+    <Content Include="_Archive\css\font-awesome.min.css" />
+    <Content Include="_Archive\css\import.css" />
+    <Content Include="_Archive\css\nivo-lightbox.css" />
+    <Content Include="_Archive\css\Site.css" />
+    <Content Include="_Archive\css\style.css" />
+    <Content Include="_Archive\css\templatemo-style.css" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\css\bootstrap.css.map" />
     <Content Include="Content\images\bootstrap-theme.css.map" />
@@ -206,6 +217,48 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="_Archive\images\about-header.jpg" />
+    <Content Include="_Archive\images\about-img.jpg" />
+    <Content Include="_Archive\images\ben-adler.jpg" />
+    <Content Include="_Archive\images\ben-krygsman-745458-unsplash.jpg" />
+    <Content Include="_Archive\images\Benjami_Adler %281%29 %281%29.jpg" />
+    <Content Include="_Archive\images\Benjami_Adler %282%29.jpg" />
+    <Content Include="_Archive\images\Benjami_Adler.jpg" />
+    <Content Include="_Archive\images\bootstrap-theme.css" />
+    <Content Include="_Archive\images\bootstrap-theme.min.css" />
+    <Content Include="_Archive\images\bootstrap.css" />
+    <Content Include="_Archive\images\bootstrap.min.css" />
+    <Content Include="_Archive\images\contact-header.jpg" />
+    <Content Include="_Archive\images\home-bg.jpg" />
+    <Content Include="_Archive\images\Justin.jpg" />
+    <Content Include="_Archive\images\justin_vignone.png" />
+    <Content Include="_Archive\images\logo.png" />
+    <Content Include="_Archive\images\mford.jpg" />
+    <Content Include="_Archive\images\Michael_Tullis.jpg" />
+    <Content Include="_Archive\images\mike_tullis.jpg" />
+    <Content Include="_Archive\images\MIndiFord.jpg" />
+    <Content Include="_Archive\images\Mindi_Ford.jpg" />
+    <Content Include="_Archive\images\portfolio-header.jpg" />
+    <Content Include="_Archive\images\portfolio-img1.jpg" />
+    <Content Include="_Archive\images\portfolio-img10.jpg" />
+    <Content Include="_Archive\images\portfolio-img2.jpg" />
+    <Content Include="_Archive\images\portfolio-img3.jpg" />
+    <Content Include="_Archive\images\portfolio-img4 %281%29.jpg" />
+    <Content Include="_Archive\images\portfolio-img4.jpg" />
+    <Content Include="_Archive\images\portfolio-img5.jpg" />
+    <Content Include="_Archive\images\portfolio-img6.jpg" />
+    <Content Include="_Archive\images\portfolio-img7.jpg" />
+    <Content Include="_Archive\images\portfolio-img8.jpg" />
+    <Content Include="_Archive\images\portfolio-img9.jpg" />
+    <Content Include="_Archive\images\robert_photo.png" />
+    <Content Include="_Archive\images\Site.css" />
+    <Content Include="_Archive\images\team1.jpg" />
+    <Content Include="_Archive\images\team2.jpg" />
+    <Content Include="_Archive\images\team3.jpg" />
+    <Content Include="_Archive\js\bootstrap.min.js" />
+    <Content Include="_Archive\js\custom.js" />
+    <Content Include="_Archive\js\jquery.js" />
+    <Content Include="_Archive\js\nivo-lightbox.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -236,14 +289,21 @@
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="_Archive\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="_Archive\_OriginalLayout.cshtml" />
     <Content Include="Views\Home\Links.cshtml" />
     <Content Include="Views\Home\OriginalContact.cshtml" />
     <Content Include="Views\Home\Projects.cshtml" />
     <Content Include="Views\Home\Resume.cshtml" />
+    <Content Include="_Archive\css\bootstrap.css.map" />
+    <Content Include="_Archive\images\bootstrap-theme.css.map" />
+    <Content Include="_Archive\images\bootstrap-theme.min.css.map" />
+    <Content Include="_Archive\images\bootstrap.css.map" />
+    <Content Include="_Archive\images\bootstrap.min.css.map" />
+    <Content Include="_Archive\images\GRamos_ResumeIT.pdf" />
+    <Content Include="_Archive\images\Ramos_Resume.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
