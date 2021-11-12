@@ -15,14 +15,35 @@ namespace PersonalSiteMVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Resume()
+        {
+            //ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Links()
+        {
+            //ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Portfolio()
+        {
+            //ViewBag.Message = "Your contact page.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            //ViewBag.Message = "Your contact page.";
 
             return View();
         }
